@@ -4,8 +4,8 @@ use tokio::net::TcpListener;
 mod handlers;
 mod models;
 mod services;
-use crate::models::{AppState, SharedState};
 use handlers::{get_author_by_id, get_authors, get_posts, health_handler, hello, submit_post};
+use models::{AppState, SharedState};
 
 #[tokio::main]
 async fn main() {
