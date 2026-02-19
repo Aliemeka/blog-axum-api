@@ -1,8 +1,8 @@
-use axum::routing::post;
 use serde::{Deserialize, Serialize};
 use std::sync::Arc;
 use tokio::sync::RwLock;
 
+// MAIN Author model
 #[derive(Serialize, Deserialize, Clone)]
 pub struct Author {
     pub id: u16,
@@ -10,12 +10,14 @@ pub struct Author {
     pub email: String,
 }
 
+// DTO to show list of authors
 #[derive(Serialize)]
 pub struct AuthorList {
     pub data: Vec<Author>,
     pub total: usize,
 }
 
+// Main Post model
 #[derive(Serialize, Deserialize, Clone)]
 pub struct Post {
     pub id: u16,
